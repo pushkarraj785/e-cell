@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+#nav {
+    height: 100px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    gap: 50px;
+    position: absolute;
+    justify-content: flex-start;
+    z-index: 99;
+}
+#nav img{
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+/* mwnu-button start*/
+
+
+.menu_icon_box{
+    z-index: 2;
+    width: fit-content;
+    height: auto;
+    margin: 25px;
+    position: fixed;
+    top: 0px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 100;
+}
+.line1 , .line2 , .line3{
+    width: 40px;
+    height: 6px;
+    margin: 8px 8px;
+    border-radius: 50px;
+    transition: 0.2s;
+    background-color: #80e4f1;
+}
+.active .line1{
+    transform: translate(0px , 15px)rotate(45deg);
+}
+.active .line2{
+    opacity: 0;
+}
+.active .line3{
+    transform: translate(0px , -15px)rotate(-45deg);
+}
+
+
+
+.box{
+    width: fit-content;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    text-align: left;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s;
+    right: 0;
+    z-index: 99;
+}
+
+nav{
+    padding-top: 100px;
+}
+nav ul{
+    margin: 0px 30px;
+}
+nav ul li{
+    list-style: none;
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+nav ul li:hover{
+    background-color: #6fb5dd6f;
+    border-radius: 8px;
+}
+nav ul li a{
+    color: #000;
+    font-size: 28px;
+    padding: 10px 30px;
+    display: block;
+    text-decoration: none;
+}
+.active_box{
+    opacity: 1;
+    pointer-events: fill;
+}
+
+/* menu-button  end*/
+
+#background {
+    height: 100%;
+    width: 100%;
+    border: px;
+    border-color: black;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+    position: relative;
+    background-color: rgba(41, 53, 95, 0.45);
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#page1 h1{
+    font-size: 70px;
+    font-weight: 900;
+    position: relative;
+    animation-name: fade-up;
+    animation-duration: 0.5s;
+    
+    
+}
+#page1 h1::before{
+    content: "Entrepreneurship Cell RGIPT";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke:2px #0a3ba5;
+    z-index: -1;
+    animation-name: fade-up;
+    animation-duration: 0.5s;
+}
+#page1 h4{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    animation-name: fade-up;
+    animation-duration: 0.5s;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    
+}
+.line {
+    width: 6px;
+    height: 150px;
+    margin: 8px 8px;
+    border-radius: 50px;
+    background-color: #7d7f80;
+    z-index: 100;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#about {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    animation-name: fade-up;
+    animation-duration: 0.5s;
+}
+
+#about h4{
+    font-size: 55px;
+    margin: 20px;
+    margin-top: 40px;
+
+    color: #80e4f1;
+}
+
+#about p{
+    font-size: 30px;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+#about p span{
+    color: #0a3ba5;
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+#events {
+    background-color: #fff;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    text-align: center;
+}
+#events .events {
+    color: #0a3ba5;
+    font-size: 55px;
+    margin: 20px;
+    margin-top: 40px;
+
+}
+
+#cards-container {
+    /* background-color: red; */
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    position: relative;
+    z-index: 10;
+  }
+  .card {
+    height: 80%;
+    width: 24%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+  }
+  #card1 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+  }
+  #card2 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+  }
+  #card3 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+  }
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #80e4f1;
+    padding: 30px;
+    padding-top: 30px;
+    opacity: 0;
+    transition: all ease 0.6s;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay h4 {
+    color: #000;
+    font-size: 25px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+  .overlay p {
+    color: #000;
+    font-size: 16px;
+  }
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  .card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+  }
+
+
+
+
+
+
+
+
+
+
+  .Teams{
+	/*min-height: 100vh;*/
+    width: 100%;
+    /* background-color: #e4e4e4; */
+    background-image: url(https://cdn.pixabay.com/photo/2015/12/01/15/43/black-1072366_1280.jpg);
+    display: flex;
+    /* Responsive behaviour */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 16px;
+ }
+
+ .card-teams {
+    position: relative;
+    width: 200px;
+	height: 250px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.15);
+    padding: 16px;
+    margin:  56px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-teams-image {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.5),
+    0 5px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-teams-image img {
+    width: 100%;
+    transform: scale(1.0);
+}
+
+.card-teams p {
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.name {
+    margin-top: 180px;
+    font-size: 1.4em;
+    color: #333;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    margin-bottom: 8px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-teams button {
+    margin: 12px 8px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.4s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button i {
+    color: #fff;
+    font-size: 1.4em;
+}
+
+  
